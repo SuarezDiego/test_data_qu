@@ -1,0 +1,25 @@
+<div class="col-lg-6">
+    {% if request.user.tipo.id == 1 %}
+    <h3>Administrador</h3>
+    {% elif request.user.tipo.id == 2 %}
+    <h3>{{request.user.proyecto.nombre}}</h3>
+    {% else %}
+    <h3>{{request.user.empresa.nombre}}</h3>
+    {% endif %}
+    {% if breadcrumbs %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{% url 'viewer:dashboard' %}"><i data-feather="home"></i></a>
+        </li>
+        {% for item in breadcrumbs %}
+        <li class="breadcrumb-item {% if forloop.last %} active {% endif %}">
+            {% if item.url %}
+            <a href="{{item.url}}">{{item.name}}</a>
+            {% else %}
+            {{item.name}}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ol>
+    {% endif %}
+</div>

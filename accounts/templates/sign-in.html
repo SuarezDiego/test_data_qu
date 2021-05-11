@@ -1,0 +1,104 @@
+{% extends 'index-account.html' %}
+{% load static %}
+
+{% block content %}
+<div class="authentication-main no-bg">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="auth-innerright">
+                <div class="authentication-box">
+                    <div class="mt-4">
+                        <div class="card-body">
+                            <div class="cont">
+                                <form id="f-sign-in" role="form" method="post">
+                                    {% csrf_token %}
+                                    <div class="text-center mb-4">
+                                        <img class="img-fluid" src="{% static 'assets/images/logo/logo.png' %}" width="150">
+                                    </div>
+                                    <h4 class="text-center m-b-15">Iniciar Sesión</h4>
+                                    <h6 class="text-center m-b-40">Ingrese sus credenciales para ingresar</h6>
+                                    <div class="form-group">
+                                        <label>{{ form.username.label }}</label>
+                                        {{ form.username }}
+                                        <div class="container-error">
+                                            {{ form.username.errors|striptags }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="{% url 'accounts:password_reset' %}" class="f-right">¿Se te olvidó la contraseña?</a>
+                                        <label>{{ form.password.label }}</label>
+                                        {{ form.password }}
+                                        <div class="container-error">
+                                            {{ form.password.errors|striptags }}
+                                        </div>
+                                    </div>
+                                    <div class="checkbox p-0 text-right">
+                                        <input id="checkbox1" type="checkbox">
+                                        <label for="checkbox1">Recordarme</label>
+                                    </div>
+                                    <div class="form-group mt-3 mb-0">
+                                        <button class="btn btn-primary btn-block" type="submit">Iniciar Sesión</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block style %}
+<style type="text/css">
+    .authentication-main .auth-innerright .card-body {
+        background-color: #001c41;
+    }
+
+    .authentication-main .cont {
+        border: 1px solid #ced4d9;
+    }
+
+    #f-sign-in h6 {
+        font-weight: 400;
+    }
+</style>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        // validar formulario
+        $("#f-sign-in").validate({
+            rules: {
+                username: {
+                    required: true,
+                    // email: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                },
+            },
+            errorPlacement: function (error, element) {
+                error.appendTo(element.parent().find('.container-error'));
+            },
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    'dataType': 'json',
+                    'url': '{% url "accounts:sign_in" %}',
+                    'data': { csrfmiddlewaretoken: getCookie('csrftoken') },
+                    'beforeSend': function () {},
+                    'success': function (response) {
+                        location.href = '{% url "viewer:dashboard" %}';
+                    },
+                    'error': function (data, textStatus, jqXHR) {
+                        form_errors('#f-sign-in', data.responseJSON.errors)
+                    }
+                });
+            }
+        });
+    });
+</script>
+{% endblock %}

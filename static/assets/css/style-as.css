@@ -1,0 +1,257 @@
+/* nav */
+
+.page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon header.main-nav .logo-wrapper,
+.page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon header.main-nav .logo-icon-wrapper {
+    padding: 18px;
+}
+
+.page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon header.main-nav {
+    width: 250px;
+}
+
+.page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon header.main-nav .main-navbar .nav-menu>li a {
+    padding: 8px 15px !important;
+}
+
+.page-wrapper.compact-wrapper .page-main-header {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+.page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon .page-body {
+    margin-left: 250px;
+    margin-top: 70px;
+}
+
+.page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon header.main-nav .main-navbar .nav-menu>li {
+    padding: 0 10px;
+}
+
+.page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon header.main-nav .main-navbar .nav-menu li a {
+    font-weight: 400 ;
+}
+
+.page-wrapper .page-body-wrapper .page-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* footer */
+
+footer {
+    margin-left: 250px;
+}
+
+
+/* card */
+.card .card-header h5{
+    line-height: 1.5 !important;
+}
+
+.card-header{
+    padding: 20px 40px !important;
+}
+
+/* table */
+
+.table-sm th, .table-sm td {
+    padding: 0.5rem 0.75rem;
+    font-size: 90%;
+}
+
+.dataTables_wrapper table.dataTable th, .dataTables_wrapper table.dataTable td {
+    padding: 0.5rem 0.75rem;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+    top: 4px;
+}
+
+.dataTables_wrapper button.btn-opcion {
+    padding: 2px 7px;
+    font-size: 12px;
+    color: #7366ff;
+}
+
+.dataTables_wrapper button.btn-opcion:hover {
+    color: #fff;
+}
+
+table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting {
+    padding-right: 35px;
+}
+
+.dataTables_wrapper .dataTables_length {
+    margin-bottom: 15px !important;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    margin: 0 10px 0 0 !important;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px !important;
+}
+
+.dataTables_wrapper button {
+    padding: 0.375rem 1.75rem !important;
+    font-size: 12px !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select{
+    font-size: 12px !important;
+}
+
+.dataTables_wrapper .dataTables_filter input[type="search"] {
+    height: 32px;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0px;
+}
+.dataTables_paginate.paging_simple_numbers{
+    font-size: 10px !important;
+}
+
+/* form */
+
+
+form label {
+    margin-bottom: .1rem;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form select.error,
+form input.error,
+form label.error,
+form textarea.error ,
+form .form-group input.error,
+form .form-group label.error {
+    margin: 0px;
+}
+
+form .container-error,
+form .form-group .container-error{
+    height: 15px;
+}
+
+form .container-error,
+form .container-error label,
+form .form-group .container-error,
+form .form-group .container-error label {
+    color: #ff5b57 !important;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* authenticate */
+
+.authentication-main .cont {
+    max-width: 500px;
+}
+
+.notify-alert{
+    max-width: 400px;
+}
+
+/* selectpicker */
+
+.bootstrap-select .dropdown-item.active,
+.bootstrap-select span.twitter-typeahead .active.tt-suggestion,
+.bootstrap-select span.twitter-typeahead .tt-suggestion.tt-cursor,
+.bootstrap-select .dropdown-item:active,
+.bootstrap-select span.twitter-typeahead .tt-suggestion:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #7366ff;
+}
+
+.bootstrap-select .dropdown-menu li {
+    font-size: 14px;
+}
+
+.bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
+    top: 8px;
+}
+
+.bootstrap-select .bs-ok-default:after {
+    font-size: 10px;
+}
+
+/* card */ 
+
+.card-header {
+    padding: 10px 30px !important;
+}
+
+.card .card-header .title{
+    font-size: 18px;
+}
+
+.card .card-body {
+    padding: 30px;
+}
+
+/* */
+
+.dropdown-menu.show,
+span.twitter-typeahead .show.tt-menu {
+    cursor: pointer;
+}
+
+
+/* datepicker */
+
+.datepicker.dropdown-menu, span.twitter-typeahead .tt-menu {
+    padding: .5rem;
+}
+
+.datepicker .datepicker-switch, .datepicker .prev, .datepicker .next, .datepicker tfoot tr th {
+    cursor: pointer;
+    color: #7366ff;
+}
+
+.datepicker .prev,
+.datepicker .next{
+    cursor: pointer;
+    color: #fff;
+    background: #7366ff;
+}
+
+.datepicker table tr td.active:hover, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active:active, .datepicker table tr td.active:hover:active, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.active, .datepicker table tr td.active:hover.active, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active[disabled], .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active.disabled:hover[disabled] {
+    background: #7366ff !important;
+}
+
+.datepicker td, .datepicker th {
+    width: 34px;
+    height: 34px;
+}
+
+/**/
+
+#report-info .card,
+#report-filter .card{
+    background: rgba(68,102,242,0.2);
+    border: 1px solid rgba(115,102,255,0.9) !important;
+    border-radius: 4px !important;
+}
+
+#report-info .card .card-body{
+    padding: 15px;
+}
+
+#report-filter .card .card-body{
+    padding: 12px;
+}
+
+#report-info .card .card-body .title{
+    display: block;
+}
+
+#report-info .card .card-body button{
+    margin-top: 6px;
+}
