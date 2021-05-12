@@ -2,4 +2,9 @@ from django.db import models
 
 
 class Company(models.Model):
+    """
+    Attributes:
+        name: String
+            Name of the company.
+    """
     name = models.CharField(max_length=200)

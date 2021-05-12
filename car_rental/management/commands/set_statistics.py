@@ -2,6 +2,10 @@ from django.core.management.base import BaseCommand
 from car_rental.models import Statistics, Client, Company, Rent, client
 
 
+"""
+Command to execute the test functions and store them in the database.
+"""
+
 def getClientIds():
     clients = Client.objects.all()
     return list(clients.values_list("id",flat=True))

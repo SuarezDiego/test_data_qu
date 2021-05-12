@@ -2,6 +2,10 @@ from django.core.management.base import BaseCommand
 from car_rental.models import Client, Company, Rent
 
 
+"""
+Command to save or overwrite the test data in the database.
+"""
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
         clientes = [
