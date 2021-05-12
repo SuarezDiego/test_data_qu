@@ -90,15 +90,6 @@
             {% include 'partial/nav.html' %}
             <div class="page-body">
                 <div class="container-fluid">
-                    <div class="page-header">
-                        <div class="row">
-                            {% include 'partial/breadcrumbs.html' %}
-                            {% block options %}
-                            {% endblock %}
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
                     {% block content %}
                     {% endblock %}
                 </div>
